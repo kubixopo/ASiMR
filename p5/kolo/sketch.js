@@ -5,7 +5,7 @@ function setup() {
 }
 
 function draw() {
-  eellipse(100,100,r)
+  ellipse(100,100,r)
 
   if(r>100){
     r=2
