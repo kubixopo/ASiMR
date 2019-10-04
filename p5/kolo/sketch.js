@@ -1,16 +1,17 @@
 function setup() {
-  createCanvas(500,500)
-  r=1
+  createCanvas(500,500);
+  r=1;
+  background('yellow');
   // put setup code here
 }
 
 function draw() {
-  ellipse(100,100,r)
-
+  background('yellow');
+  ellipse(100,100,r);
   if(r>100){
-    r=2
+    r=2;
   }else{
-    r++
+    r++;
   }
 
   // put drawing code here
