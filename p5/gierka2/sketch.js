@@ -45,20 +45,19 @@ this.mc=function mousePressed(){
 
 }
 
-function mouseReleased(){
-  console.log(tab.length)
-for(i of tab){
+function mousePressed(){
   
-  if(mouseX>i.x && mouseX<i.x+i.a && mouseY>i.y && mouseY<i.y+i.a){
+for(i of tab){
+  console.log(tab.length)
+  if(mouseX>i.x && mouseX<i.x+i.a && mouseY>i.y && mouseY<i.y+i.a && mouseIsPressed){
     
-    i.wx=(i.x+i.a)/2
-    i.wy=(i.y+i.a)/2
     let q=new kwadrat(i.x,i.y,i.a/2)
-    let w=new kwadrat(i.wx,i.y,i.a/2)
-    let e=new kwadrat(i.x,i.wy,i.a/2)
-    let r=new kwadrat(i.wx,i.wy,i.a/2)
+    let w=new kwadrat(i.a/2+i.x,i.y,i.a/2)
+    let e=new kwadrat(i.x,i.a/2+i.y,i.a/2)
+    let r=new kwadrat(i.x+i.a/2,i.y+i.a/2,i.a/2)
     i.state=false
   tab.push(q,w,e,r)
+  break;
 
 
 }
