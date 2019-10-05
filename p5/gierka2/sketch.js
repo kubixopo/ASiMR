@@ -1,15 +1,36 @@
 function setup() {
   createCanvas(500,500);
   r=1;
-  tab.push(new kwadrat(10,10,100))
+  tab.push(new kwadrat(100,100,300))
   // put setup code here
+  //noStroke()
 }
+let score=1
 let tab=[]
 function draw() {
   background(170, 57, 57);
-  
-
+  fill('black')
+  text(score,width/2,50)
+  score=tab.length
 for(i of tab){
+  if(i.a==300){
+    fill(254,167,5)
+  }else if(i.a==150){
+    fill(248,5,23)
+    
+  }else if(i.a==75){
+    fill(20,72,169)
+  }else if(i.a==37.5){
+    fill(33,210,5)
+  }else if(i.a==18.75){
+  fill(165,4,165)
+
+  }else if(i.a==4.6875){
+    fill(254,76,5)
+    
+  }
+
+
   i.drawa()
   //i.mc()
 }
@@ -23,6 +44,8 @@ this.y=y
 this.state=true
 this.a=a
 this.drawa=function(){
+
+
   if(this.state)
   rect(this.x,this.y,this.a,this.a)
 
@@ -42,26 +65,33 @@ this.mc=function mousePressed(){
 
 }
 
-
+let s=false
 }
 let q=0,w=0,e=0,r=0
 function mouseReleased(){
   
 for(i of tab){
   console.log(tab.length)
-  if(mouseX>i.x && mouseX<i.x+i.a && mouseY>i.y && mouseY<i.y+i.a ){
+  if(mouseX>i.x && mouseX<i.x+i.a && mouseY>i.y && mouseY<i.y+i.a && i.state){
     
     let q=new kwadrat(i.x,i.y,i.a/2)
     let w=new kwadrat(i.a/2+i.x,i.y,i.a/2)
     let e=new kwadrat(i.x,i.a/2+i.y,i.a/2)
     let r=new kwadrat(i.x+i.a/2,i.y+i.a/2,i.a/2)
     i.state=false
+    s=true
     tab.push(q,w,e,r)
+    
    break;
+    
   //
   
   
 }
-}
 
+}
+if(s){
+  
+  s=false
+}
 }
