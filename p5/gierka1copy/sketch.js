@@ -5,8 +5,8 @@ tab.push(new kulka(140,140,200))
 }
 let tab=[]
 function draw() {
- background(170, 57, 57,0.6)
-fill(76,120,120,100)
+ background(170, 57, 57)
+fill(76,250,34,80)
 for(i of tab){
   if(i.state)
   i.drawa()
