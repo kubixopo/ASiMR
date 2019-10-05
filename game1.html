@@ -66,7 +66,7 @@
     font-size: 15px;
     float: right;
     margin-left: 25px;
-    transition: height .7s;
+    transition: height 1s;
     opacity: 1;
 
 }
@@ -88,7 +88,7 @@
     text-align: center;
     overflow: hidden;
     opacity: 0;
-    transition: opacity .7s;
+    transition: opacity 1s;
 }
 
 .Strona:hover
@@ -107,7 +107,20 @@
     justify-content: center;
     text-align: center;
     overflow: hidden;
+
+}
+
+.Menu:hover
+{
+    background-color: rgba(13, 77, 77, 0.658);;
     font-size: 19px;
+
+}
+
+.Menu:hover ~ .Strona
+{
+    opacity: 1;
+
 }
 
 a
