@@ -9,6 +9,8 @@ let score=1
 let tab=[]
 function draw() {
   background(170, 57, 57,0.6);
+  fill('white')
+  rect(100,100,300)
   fill('black')
   text(score,width/2,50)
   score=tab.length
