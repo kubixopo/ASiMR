@@ -9,28 +9,33 @@ let score=1
 let tab=[]
 function draw() {
   background(170, 57, 57,0.6);
-  fill('white')
-  rect(100,100,300)
+ // fill('white')
+  //rect(100,100,300,300)
   fill('black')
   text(score,width/2,50)
   score=tab.length
 for(i of tab){
+ //if(i.state){
+  // fill(100,100,100,0.5)
+
+  //rect(i.x,i.y,i.a,i.a)
+
   if(i.a==300){
-    fill(254-170,167,5,0.6)
+    fill(254,167,5,0.6)
   }else if(i.a==150){
-    fill(248-170,5,23)
+    fill(248,5,23,0.6)
     
   }else if(i.a==75){
     
     fill(20,72,169,0.6)
   }else if(i.a==37.5){
     
-    fill(33,210-57,5,0.6)
+    fill(33,210,5,0.6)
   }else if(i.a==18.75){
-  fill(165,4,165)
+  fill(165,4,165,0.6)
 
   }else if(i.a==9.375){
-    fill(254,76-57,5,0.6)
+    fill(254,76,5,0.6)
     
   }else if(i.a==4.6875){
     fill(204-170,245-57,5,0.6)
@@ -43,6 +48,7 @@ for(i of tab){
 
   i.drawa()
   //i.mc()
+  
 }
 
   }
@@ -75,7 +81,7 @@ this.mc=function mousePressed(){
 
 }
 
-let s=false
+//let s=false
 }
 let q=0,w=0,e=0,r=0
 function mouseReleased(){
@@ -89,7 +95,7 @@ for(i of tab){
     let e=new kwadrat(i.x,i.a/2+i.y,i.a/2)
     let r=new kwadrat(i.x+i.a/2,i.y+i.a/2,i.a/2)
     i.state=false
-    s=true
+   // s=true
     tab.push(q,w,e,r)
     
    break;
@@ -100,8 +106,5 @@ for(i of tab){
 }
 
 }
-if(s){
-  
-  s=false
-}
+
 }
