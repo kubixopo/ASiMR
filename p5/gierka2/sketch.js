@@ -8,7 +8,7 @@ function setup() {
 let score=1
 let tab=[]
 function draw() {
-  background(170, 57, 57,0.602);
+  background(170, 57, 57,0.6);
   fill('black')
   text(score,width/2,50)
   score=tab.length
@@ -19,8 +19,10 @@ for(i of tab){
     fill(248,5,23)
     
   }else if(i.a==75){
+    fill(20,72,169)
     fill(20,72,169,0.6)
   }else if(i.a==37.5){
+    fill(33,210,5)
     fill(33,210,5,0.6)
   }else if(i.a==18.75){
   fill(165,4,165)
