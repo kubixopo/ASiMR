@@ -1,11 +1,11 @@
 function setup() {
-  createCanvas(600, 600);
-  x1=random(40,460)
-  y1=random(40,460)
-  x2=random(40,460)
-  y2=random(40,460)
-  x3=random(40,460)
-  y3=random(40,460)
+  createCanvas(450, 450);
+  x1=random(40,400)
+  y1=random(40,400)
+  x2=random(40,400)
+  y2=random(40,400)
+  x3=random(40,400)
+  y3=random(40,400)
 }
 function draw() {
   background('#303030')
