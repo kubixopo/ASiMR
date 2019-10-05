@@ -18,7 +18,7 @@ display: block;
 
 .text1{
 color: white;
-font-size: 90px;
+font-size: 60px;
 font-style: bold;
 font-weight: 700;
 letter-spacing: 8px;
@@ -33,7 +33,7 @@ animation: text 1.7s 1;
 }
 .text2{
 
-    font-size: 60px;
+    font-size: 40px;
     color: rgb(255, 255, 255);
     animation: text1 2s 1;
 }
@@ -41,19 +41,19 @@ animation: text 1.7s 1;
 @keyframes text{
 0%{
     color: rgba(255, 255, 255, 0);
-    margin-bottom: -20px;
+    margin-bottom: -10px;
 
 }
 
 30%{
     letter-spacing: 8px;
-    margin-bottom: -20px;
+    margin-bottom: -10px;
 }
 
 85%{
 
     letter-spacing: 8px;
-    margin-bottom: -20px;
+    margin-bottom: -10px;
 }
 }
 
