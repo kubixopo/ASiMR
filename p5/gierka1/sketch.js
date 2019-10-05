@@ -49,7 +49,7 @@ if(dist(i.x,i.y,mouseX,mouseY)<i.r && i.state){
   let q=new kulka(i.x,i.y,i.r/2)
   let w=new kulka(i.x,i.y,i.r/2)
   i.state=false
-  clear()
+ // clear()
 tab.push(q,w)
 break
 }
