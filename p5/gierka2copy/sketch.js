@@ -30,7 +30,7 @@ function draw() {
   rect(0,100,100,400)
   rect(100,400,400,100)
   rect(400,100,100,300)
-  stroke(0.5)
+  //stroke(0.5)
   }
  
  if(frameCount%60==0){
