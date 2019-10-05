@@ -6,10 +6,16 @@
 }
 .container{
     background-color: rgba(85, 0, 0, 0.39);
+    transition: background-color .5s;
     text-align:center;
     width: 100%;
 
 }
+
+.container:hover{
+background-color: rgb(64, 127, 127, 0.445);
+}
+
 .container span{
 text-transform: uppercase;
 display: block;
