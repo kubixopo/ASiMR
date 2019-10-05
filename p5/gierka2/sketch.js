@@ -21,9 +21,9 @@ for(i of tab){
   //rect(i.x,i.y,i.a,i.a)
 
   if(i.a==300){
-    fill(254,167,5)
+    fill(254,167,5,0.6)
   }else if(i.a==150){
-    fill(248,5,23)
+    fill(248,5,23,0.6)
     
   }else if(i.a==75){
     
