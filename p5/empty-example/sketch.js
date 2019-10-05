@@ -1,5 +1,5 @@
 function setup() {
-  createCanvas(450, 450);
+  createCanvas(496, 496);
   x1=random(40,400)
   y1=random(40,400)
   x2=random(40,400)
