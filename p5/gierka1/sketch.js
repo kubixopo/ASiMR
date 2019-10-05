@@ -1,11 +1,11 @@
 function setup() {
   createCanvas(496, 496);
 tab.push(new kulka(140,140,200))
-noStroke()
+
 }
 let tab=[]
 function draw() {
- background(170, 57, 57, 0.9)
+ background(170, 57, 57, 0.6)
 fill('white')
 for(i of tab){
   if(i.state)
