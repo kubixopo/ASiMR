@@ -18,7 +18,7 @@ display: block;
 
 .text1{
 color: white;
-font-size: 90px;
+font-size: 67px;
 font-style: bold;
 font-weight: 700;
 letter-spacing: 8px;
@@ -33,7 +33,7 @@ animation: text 1.7s 1;
 }
 .text2{
 
-    font-size: 60px;
+    font-size: 45px;
     color: rgb(255, 255, 255);
     animation: text1 2s 1;
 }
