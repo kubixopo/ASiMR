@@ -44,23 +44,24 @@ this.mc=function mousePressed(){
 
 
 }
-
-function mousePressed(){
+let q=0,w=0,e=0,r=0
+function mouseReleased(){
   
 for(i of tab){
   console.log(tab.length)
-  if(mouseX>i.x && mouseX<i.x+i.a && mouseY>i.y && mouseY<i.y+i.a && mouseIsPressed){
+  if(mouseX>i.x && mouseX<i.x+i.a && mouseY>i.y && mouseY<i.y+i.a ){
     
     let q=new kwadrat(i.x,i.y,i.a/2)
     let w=new kwadrat(i.a/2+i.x,i.y,i.a/2)
     let e=new kwadrat(i.x,i.a/2+i.y,i.a/2)
     let r=new kwadrat(i.x+i.a/2,i.y+i.a/2,i.a/2)
     i.state=false
-  tab.push(q,w,e,r)
-  break;
-
-
+    tab.push(q,w,e,r)
+   break;
+  //
+  
+  
+}
 }
 
-}
 }
