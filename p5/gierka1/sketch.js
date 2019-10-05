@@ -1,7 +1,7 @@
 function setup() {
   createCanvas(496, 496);
 tab.push(new kulka(140,140,200))
-noStroke()
+//noStroke()
 }
 let tab=[]
 function draw() {
