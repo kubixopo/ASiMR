@@ -25,8 +25,14 @@ for(i of tab){
   }else if(i.a==18.75){
   fill(165,4,165)
 
-  }else if(i.a==4.6875){
+  }else if(i.a==9.375){
     fill(254,76,5)
+    
+  }else if(i.a==4.6875){
+    fill(204,245,5)
+    
+  }else if(i.a==2.34375){
+    fill(15,94,165)
     
   }
 
