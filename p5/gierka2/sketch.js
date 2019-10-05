@@ -16,24 +16,24 @@ function draw() {
   score=tab.length
 for(i of tab){
   if(i.a==300){
-    fill(254,167,5,0.6)
+    fill(254-170,167,5,0.6)
   }else if(i.a==150){
-    fill(248,5,23)
+    fill(248-170,5,23)
     
   }else if(i.a==75){
-    fill(20,72,169)
+    
     fill(20,72,169,0.6)
   }else if(i.a==37.5){
-    fill(33,210,5)
-    fill(33,210,5,0.6)
+    
+    fill(33,210-57,5,0.6)
   }else if(i.a==18.75){
   fill(165,4,165)
 
   }else if(i.a==9.375){
-    fill(254,76,5,0.6)
+    fill(254,76-57,5,0.6)
     
   }else if(i.a==4.6875){
-    fill(204,245,5,0.6)
+    fill(204-170,245-57,5,0.6)
     
   }else if(i.a==2.34375){
     fill(15,94,165,0.6)
