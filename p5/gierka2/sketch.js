@@ -2,7 +2,7 @@ function setup() {
  // blendMode(REPLACE)
   createCanvas(500,500);
   r=1;
-  tab.push(new kwadrat(75,100,300))
+  tab.push(new kwadrat(100,100,300))
   // put setup code here
   //noStroke()
  /* col1=color('rgba(254,167,5,0.6)')
@@ -41,9 +41,9 @@ function draw() {
   //fill(255,255,255,0.6)
   //rect(100,100,300,300)
   
-  rect(width/2-40,35,50,20)
+  rect(width/2-18,35,50,20)
   fill('black')
-  text(score,width/2-25,50)
+  text(score,width/2,50)
   score=tab.length
 for(i of tab){
  //if(i.state){
@@ -75,10 +75,10 @@ for(i of tab){
     
     fill(3,250,5,i.e)
   }else if(i.a==18.75){
-  fill(145,4,65,i.e)
+  fill(205,47,236,i.e)
 
   }else if(i.a==9.375){
-    fill(254,76,5,i.e)
+    fill(254,56,5,i.e)
     
   }else if(i.a==4.6875){
     fill(204,245,5,i.e)
@@ -91,7 +91,7 @@ for(i of tab){
 
   i.drawa()
   if(i.e<2){
- i.e+=0.1
+ i.e+=0.05
   }
   //i.mc()
   
@@ -105,7 +105,7 @@ this.x=x
 this.y=y
 this.state=true
 this.a=a
-this.e=2
+this.e=0
 this.drawa=function(){
 
 
@@ -135,7 +135,7 @@ function mouseReleased(){
   
 for(i of tab){
   console.log(tab.length)
-  if(mouseX>i.x && mouseX<i.x+i.a && mouseY>i.y && mouseY<i.y+i.a && i.state){
+  if(mouseX>i.x && mouseX<i.x+i.a && mouseY>i.y && mouseY<i.y+i.a && i.state && i.a/2>2){
     
     let q=new kwadrat(i.x,i.y,i.a/2)
     let w=new kwadrat(i.a/2+i.x,i.y,i.a/2)
