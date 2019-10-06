@@ -81,7 +81,7 @@ ul
 .nawigator a:hover
 {
 
-    background-color: rgba(13, 77, 77, 0.658);;
+    background-color: rgba(13, 77, 77, 0.658);
     font-size: 30px;
 }
 
@@ -108,39 +108,103 @@ ul
     border-width: 20px;
     border-color: rgba(95, 17, 17, 0.863);
     background-color:rgba(85, 0, 0, 0.739);
+
 }
 
-input#menu
+.nawigator label:hover
+{
+    background-color: rgba(13, 77, 77, 0.658);
+}
+input#checkbox1
 {
     display: none;
 }
 
 .Menu
 {
-  height: 0px;
-  width: 75px;
-  overflow: hidden;
-  background-color:rgba(85, 0, 0, 0.739);
-  font-family: 'Big Shoulders Display', cursive;
-  color: aliceblue;
-  float: right;
-  margin-right: 0px;
-  transition: height .5s;
-  border-bottom-style: groove;
-  border-right-style: groove;
-  border-left-style: groove;
-  border-width: 20px;
-  border-color: rgba(95, 17, 17, 0.863);
-  background-color:rgba(85, 0, 0, 0.739);
-  align-items: center;
-  justify-content: center;
-  text-align: center;
+    height: 0px;
+    width: 75px;
+    overflow: hidden;
+    background-color:rgba(85, 0, 0, 0.739);
+    font-family: 'Big Shoulders Display', cursive;
+    color: aliceblue;
+    float: right;
+    margin-right: 0px;
+    transition: height .5s;
+    border-bottom-style: groove;
+    border-right-style: groove;
+    border-left-style: groove;
+    border-width: 20px;
+    border-color: rgba(95, 17, 17, 0.863);
+    background-color:rgba(85, 0, 0, 0.739);
+    align-items: center;
+    justify-content: center;
+    text-align: center;
 }
 
 input:checked ~ .Menu
 {
   opacity: 1;
   height: 435px;
+    opacity: 1;
+    height: 375px;
+}
+
+.kreski_hehe
+{
+    margin: 0 auto;
+    width: 30px;
+    height: 30px;
+    position: relative;
+    display: block;
+}
+
+.krecha1, .krecha2, .krecha3
+{
+    padding: 0;
+    width: 30px;
+    height: 4px;
+    background-color: #ffffff;
+    display: block;
+    border-radius: 4px;
+    margin-left: auto;
+    margin-right: auto;
+    position: absolute;
+    transition: all 0.4s ease-in-out;
+    opacity: 1;
+}
+
+.krecha1
+{
+    top: 0px;
+}
+
+.krecha2
+{
+    top: 13.5px;
+}
+
+.krecha3
+{
+    bottom: 0px;
+}
+
+.checkbox1:checked + label > .kreski_hehe > .krecha1{
+    transform: rotate(45deg);
+    transform-origin: 5%;
+    width: 41px
+}
+
+.checkbox1:checked + label > .kreski_hehe > .krecha2 {
+    transform: opacity 0;
+    background-color: transparent;
+}
+
+
+.checkbox1:checked + label > .kreski_hehe > .krecha3 {
+    transform-origin: 5%;
+    transform: rotate(-45deg);
+    width: 41px;
 }
 
 a
@@ -160,8 +224,14 @@ a
             <div id="logo"></div>
             <div id="kloc">
               <div class="nawigator">
-                <input type="checkbox" id="menu">
-                <label for="menu"><b>Menu</b></label>
+                <input type="checkbox" id="checkbox1" class="checkbox1 visuallyHidden">
+                <label for="checkbox1">
+                    <div class="kreski_hehe">
+                      <span class="krecha1"></span>
+                      <span class="krecha2"></span>
+                      <span class="krecha3"></span>
+                    </div>
+                </label>
                   <div class="Menu">
                   <ul>
                       <li><center><h2><a href="index.html">Powrót</a></h2><center></li>
