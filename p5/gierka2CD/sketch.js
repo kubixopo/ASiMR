@@ -1,17 +1,60 @@
 function setup() {
  
-  createCanvas(500,1000);
+  createCanvas(1000,500);
   r=1;
   tab.push(new kwadrat(100,100,300))
+   
+  for(o of tab_obraz1){
+    if(o.a==300){
+      fill(254,167,5,150)
+    }else if(o.a==150){
+      fill(248,5,23,150)
+    }else if(o.a==75){
+      fill(20,72,250,150)
+    }else if(o.a==37.5){
+      fill(3,250,5,150)
+    }else if(o.a==18.75){
+    fill(205,47,236,150)
+    }else if(o.a==9.375){
+      fill(254,56,5,150) 
+    }else if(o.a==4.6875){
+      fill(204,245,5,150) 
+    }else if(o.a==2.34375){
+      fill(15,94,165,150)  
+    }
+    o.drawa();
+  
+  
+  }
   
 }
+let podobienstwo=0
 let col1,col2,col3,col4
 let score=1
 let tab=[]
 let f=true
 function draw() {
-  background(170, 57, 57,0.1);
+  podobienstwo=0
+  if(tab.length==tab_obraz1.length){
+  for(let i=0;i<tab.length;i++){
+    for(let b=0;b<tab_obraz1.length;b++){
+    if(tab[i].state==tab_obraz1[b].state && tab[i].x==tab_obraz1[b].x-500 && tab[i].y==tab_obraz1[b].y && tab[i].a==tab_obraz1[b].a){
+      podobienstwo++
+    }
 
+
+  }
+}
+  }
+  if(podobienstwo>tab_obraz1.length-2){
+textSize(200)
+
+    text('WIN',300,height/2)
+    textSize(10)
+  }
+
+  background(170, 57, 57,0.1);
+ 
   if(f){
   fill(170, 57, 57,0.1)
 
@@ -122,7 +165,7 @@ if(key=='p'){
 
 }
 
-let tab_obraz1=[new obraz(100,100,300,false),new obraz(100,100,150,false),new obraz(250,100,150,false),new obraz(100,250,150,false),new obraz(250,250,150,false),new obraz(250,100,75,true),new obraz(325,100,75,true),new obraz(250,175,75,false),new obraz(325,175,75,true),new obraz(100,250,75,true),new obraz(175,250,75,false),new obraz(100,325,75,true),new obraz(175,325,75,true),new obraz(100,100,75,true),new obraz(175,100,75,true),new obraz(100,175,75,true),new obraz(175,175,75,false),new obraz(250,250,75,false),new obraz(325,250,75,true),new obraz(250,325,75,true),new obraz(325,325,75,true),new obraz(250,175,37.5,true),new obraz(287.5,175,37.5,true),new obraz(250,212.5,37.5,false),new obraz(287.5,212.5,37.5,true),new obraz(175,250,37.5,true),new obraz(212.5,250,37.5,false),new obraz(175,287.5,37.5,true),new obraz(212.5,287.5,37.5,true),new obraz(175,175,37.5,true),new obraz(212.5,175,37.5,true),new obraz(175,212.5,37.5,true),new obraz(212.5,212.5,37.5,false),new obraz(250,250,37.5,false),new obraz(287.5,250,37.5,true),new obraz(250,287.5,37.5,true),new obraz(287.5,287.5,37.5,true),new obraz(250,250,18.75,false),new obraz(268.75,250,18.75,true),new obraz(250,268.75,18.75,true),new obraz(268.75,268.75,18.75,true),new obraz(212.5,212.5,18.75,true),new obraz(231.25,212.5,18.75,true),new obraz(212.5,231.25,18.75,true),new obraz(231.25,231.25,18.75,false),new obraz(250,212.5,18.75,true),new obraz(268.75,212.5,18.75,true),new obraz(250,231.25,18.75,false),new obraz(268.75,231.25,18.75,true),new obraz(212.5,250,18.75,true),new obraz(231.25,250,18.75,false),new obraz(212.5,268.75,18.75,true),new obraz(231.25,268.75,18.75,true),new obraz(231.25,231.25,9.375,true),new obraz(240.625,231.25,9.375,true),new obraz(231.25,240.625,9.375,true),new obraz(240.625,240.625,9.375,false),new obraz(250,231.25,9.375,true),new obraz(259.375,231.25,9.375,true),new obraz(250,240.625,9.375,false),new obraz(259.375,240.625,9.375,true),new obraz(250,250,9.375,false),new obraz(259.375,250,9.375,true),new obraz(250,259.375,9.375,true),new obraz(259.375,259.375,9.375,true),new obraz(231.25,250,9.375,true),new obraz(240.625,250,9.375,false),new obraz(231.25,259.375,9.375,true),new obraz(240.625,259.375,9.375,true),new obraz(240.625,240.625,4.6875,true),new obraz(245.3125,240.625,4.6875,true),new obraz(240.625,245.3125,4.6875,true),new obraz(245.3125,245.3125,4.6875,true),new obraz(250,240.625,4.6875,true),new obraz(254.6875,240.625,4.6875,true),new obraz(250,245.3125,4.6875,true),new obraz(254.6875,245.3125,4.6875,true),new obraz(250,250,4.6875,true),new obraz(254.6875,250,4.6875,true),new obraz(250,254.6875,4.6875,true),new obraz(254.6875,254.6875,4.6875,true),new obraz(240.625,250,4.6875,true),new obraz(245.3125,250,4.6875,true),new obraz(240.625,254.6875,4.6875,true),new obraz(245.3125,254.6875,4.6875,true)]
+let tab_obraz1=[new obraz(100,100,300,false),new obraz(100,100,150,false),new obraz(250,100,150,false),new obraz(100,250,150,false),new obraz(250,250,150,false),new obraz(100,100,75,true),new obraz(175,100,75,true),new obraz(100,175,75,true),new obraz(175,175,75,false),new obraz(250,100,75,true),new obraz(325,100,75,true),new obraz(250,175,75,false),new obraz(325,175,75,true),new obraz(250,250,75,false),new obraz(325,250,75,true),new obraz(250,325,75,true),new obraz(325,325,75,true),new obraz(100,250,75,true),new obraz(175,250,75,false),new obraz(100,325,75,true),new obraz(175,325,75,true),new obraz(175,175,37.5,true),new obraz(212.5,175,37.5,true),new obraz(175,212.5,37.5,true),new obraz(212.5,212.5,37.5,false),new obraz(250,175,37.5,true),new obraz(287.5,175,37.5,true),new obraz(250,212.5,37.5,false),new obraz(287.5,212.5,37.5,true),new obraz(250,250,37.5,false),new obraz(287.5,250,37.5,true),new obraz(250,287.5,37.5,true),new obraz(287.5,287.5,37.5,true),new obraz(175,250,37.5,true),new obraz(212.5,250,37.5,false),new obraz(175,287.5,37.5,true),new obraz(212.5,287.5,37.5,true),new obraz(212.5,212.5,18.75,true),new obraz(231.25,212.5,18.75,true),new obraz(212.5,231.25,18.75,true),new obraz(231.25,231.25,18.75,false),new obraz(250,212.5,18.75,true),new obraz(268.75,212.5,18.75,true),new obraz(250,231.25,18.75,false),new obraz(268.75,231.25,18.75,true),new obraz(250,250,18.75,false),new obraz(268.75,250,18.75,true),new obraz(250,268.75,18.75,true),new obraz(268.75,268.75,18.75,true),new obraz(212.5,250,18.75,true),new obraz(231.25,250,18.75,false),new obraz(212.5,268.75,18.75,true),new obraz(231.25,268.75,18.75,true),new obraz(231.25,231.25,9.375,true),new obraz(240.625,231.25,9.375,true),new obraz(231.25,240.625,9.375,true),new obraz(240.625,240.625,9.375,false),new obraz(250,231.25,9.375,true),new obraz(259.375,231.25,9.375,true),new obraz(250,240.625,9.375,false),new obraz(259.375,240.625,9.375,true),new obraz(250,250,9.375,false),new obraz(259.375,250,9.375,true),new obraz(250,259.375,9.375,true),new obraz(259.375,259.375,9.375,true),new obraz(231.25,250,9.375,true),new obraz(240.625,250,9.375,false),new obraz(231.25,259.375,9.375,true),new obraz(240.625,259.375,9.375,true),new obraz(240.625,240.625,4.6875,true),new obraz(245.3125,240.625,4.6875,true),new obraz(240.625,245.3125,4.6875,true),new obraz(245.3125,245.3125,4.6875,true),new obraz(250,240.625,4.6875,true),new obraz(254.6875,240.625,4.6875,true),new obraz(250,245.3125,4.6875,true),new obraz(254.6875,245.3125,4.6875,true),new obraz(250,250,4.6875,true),new obraz(254.6875,250,4.6875,true),new obraz(250,254.6875,4.6875,true),new obraz(254.6875,254.6875,4.6875,true),new obraz(240.625,250,4.6875,true),new obraz(245.3125,250,4.6875,true),new obraz(240.625,254.6875,4.6875,true),new obraz(245.3125,254.6875,4.6875,true)]
 function obraz(x,y,a,s){
 
 
@@ -141,18 +184,4 @@ function obraz(x,y,a,s){
     
     
     
-    }
-
-    function draw(){
-
-for(o of tab_obraz1){
-  i.drawa();
-
-
-}
-
-
-
-
-
     }
