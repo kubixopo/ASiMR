@@ -28,10 +28,10 @@ this.drawa= function() {
 ellipse(this.x,this.y,this.r)
 this.x+=this.vx
 this.y+=this.vy
-if(this.x>width-this.r/2 || this.x<this.r/1.5){
+if(this.x>width-this.r/2 || this.x<this.r/2){
   this.vx=-this.vx
 }
-if(this.y>height-this.r/2 || this.y<this.r/1.5){
+if(this.y>height-this.r/2 || this.y<this.r/2){
   this.vy=-this.vy
 }
 
