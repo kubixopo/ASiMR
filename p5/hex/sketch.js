@@ -4,7 +4,8 @@ function setup() {
   translate(width / 2, height / 2)
   rotate(PI/9)
   //frameRate(30)
-  kw=new rec(10,250)
+  kw=new rec(10,250,250,30)
+  kw1=new rec(250,10,30,250)
 }
 let r=0
 function draw() {
@@ -13,6 +14,7 @@ function draw() {
   r++
   ty()
   kw.drawa()
+  kw1.drawa()
 hexagon(250,250,0.4)
 }
 
@@ -69,16 +71,25 @@ function keyDown(){
 }
 
 
-function rec(x1,y1){
+function rec(x1,y1,h,w){
 this.x=x1
 this.y=y1
 this.state=true
-this.h=250
-this.w=30
+this.h=h
+this.w=w
+
 
 this.drawa=function(){
 if(this.state){
-	if(x>this.x-10 && x<this.x+10 && y>this.y-120 && y<this.y+120){
+	if(x>this.x-10 && x<this.x+10 && y>this.y-120 && y<this.y+120 || dist(250,250,x,y)<70){
+		console.log('l')
+		fill('white')
+		rect(225,50,100,50)
+		fill('red')
+		text('BŁĄD',220,50)
+	}
+
+	if(x>this.x-120 && x<this.x+120 && y>this.y-10 && y<this.y+10 || dist(250,250,x,y)<70){
 		console.log('l')
 		fill('white')
 		rect(225,50,100,50)
@@ -92,21 +103,46 @@ this.x++
 if(this.x>250){
 	this.x--
 }
+if(this.y<250){
+	this.y++
+	}
+if(this.y>250){
+		this.y--
+	}
 
 
 
 }
+
+if(this.h>200){
 if((this.x>180 && this.x<240) || (this.x<320 && this.x>250)){
 	this.state=false
 	if(random(0,1)>0.5){
-		kw=new rec(10,250)
+		kw=new rec(10,250,250,30)
 	}else{
-		kw=new rec(490,250)
+		kw=new rec(490,250,250,30)
 }
 	}
+}
+if(this.h<150){
+	if((this.y>180 && this.y<240) || (this.y<320 && this.y>250)){
+		this.state=false
+		if(random(0,1)>0.5){
+			kw1=new rec(250,10,30,250)
+		}else{
+			kw1=new rec(250,490,30,250)
+	}
+		}
+
+
+
+
+}
+	
+	}
+	
 
 	
 	
 }
 
-}
