@@ -87,6 +87,7 @@ if(this.state){
 		rect(225,50,100,50)
 		fill('red')
 		text('BŁĄD',220,50)
+		clear();
 	}
 
 	if(x>this.x-120 && x<this.x+120 && y>this.y-10 && y<this.y+10 || dist(250,250,x,y)<70){
@@ -95,6 +96,7 @@ if(this.state){
 		rect(225,50,100,50)
 		fill('red')
 		text('BŁĄD',220,50)
+		clear();
 	}
 rect(this.x,this.y,this.w,this.h)
 if(this.x<250){
