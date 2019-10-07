@@ -69,15 +69,22 @@ function keyDown(){
 }
 
 
-function rec(x,y){
-this.x=x
-this.y=y
+function rec(x1,y1){
+this.x=x1
+this.y=y1
 this.state=true
 this.h=250
 this.w=30
 
 this.drawa=function(){
 if(this.state){
+	if(x>this.x-10 && x<this.x+10 && y>this.y-120 && y<this.y+120){
+		console.log('l')
+		fill('white')
+		rect(225,50,100,50)
+		fill('red')
+		text('BŁĄD',220,50)
+	}
 rect(this.x,this.y,this.w,this.h)
 if(this.x<250){
 this.x++
@@ -97,6 +104,8 @@ if((this.x>180 && this.x<240) || (this.x<320 && this.x>250)){
 		kw=new rec(490,250)
 }
 	}
+
+	
 	
 }
 
