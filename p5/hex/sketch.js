@@ -85,7 +85,7 @@ if(this.state){
 		console.log('l')
 		fill('white')
 		rect(225,50,100,50)
-		fill('red')
+		fill(250,0,0,90)
 		text('BŁĄD',220,50)
 		clear();
 	}
@@ -94,7 +94,7 @@ if(this.state){
 		console.log('l')
 		fill('white')
 		rect(225,50,100,50)
-		fill('red')
+		fill(250,0,0,90)
 		text('BŁĄD',220,50)
 		clear();
 	}
