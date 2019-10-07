@@ -29,6 +29,7 @@
         font-family: 'Big Shoulders Display', cursive;
         color: aliceblue;
         font-size: 24px;
+        text-align: center;
         float:left;
         transition: background-color 0.5s;
         transition: width .5s, font-size; 
@@ -64,8 +65,8 @@
         margin-top: 40px;
         margin-right:0px;
         max-width: 800px;
-        transition: background-image .2s;
-        transition: width .4s, height .4s;
+        transition: background-image ;
+        transition: width .3s, height .3s;
        
 
     }
@@ -73,8 +74,8 @@
             #img_1:hover{
             
             background-image: url(teamfoto3.jpg);
-            width: 800px;
-            height: 650px;
+            width: 600px;
+            height: 400px;
 
             }
     
@@ -92,11 +93,11 @@
         background-color:rgba(105, 29, 29, 0.239);
         margin-left: 250px;
         margin-right: 0px;
-        margin-top: 100px;
-        margin-bottom: 40px;
+        margin-top: 140px;
+        margin-bottom: 10px;
         color: aliceblue;
         transition: font-size 2s;
-        transition: width .4s;
+        transition: width .2s;
     }   
     
             #about_project:hover{
