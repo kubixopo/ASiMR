@@ -1,3 +1,131 @@
+
+
+
+   
+
+    #content{
+        width: 100%;
+        height: 2300px;
+        background-image: url(background_image.jpg);
+        background-size:cover;
+        height: 100%;
+        
+    }
+    
+    
+        #about_us{
+        font-weight: 200;
+        width: 250px;
+        height: 350px;
+        background-color:rgba(64, 127, 127, 0.157);
+        border-style: groove;
+        border-width: 10px;
+        border-color: rgba(13, 77, 77, 0.658);
+        padding: 10px;
+        margin-top: 40px;
+        margin-right: 50px;
+        margin-bottom: 50px;
+        margin-left: 250px;
+        font-family: 'Big Shoulders Display', cursive;
+        color: aliceblue;
+        font-size: 24px;
+        float:left;
+        transition: background-color 0.5s;
+        transition: width .5s, font-size; 
+        
+    }
+    
+        a{
+        color: currentColor;
+    }
+    
+            #about_us:hover{
+            background-color: rgba(85, 0, 0, 0.568);
+            width: 350px;
+            font-size: 32px;
+            
+           
+    
+    }
+
+
+    /*<span style="margin-left:10px; margin-top:20px;"><img src="teamfoto.jpg" alt="Zdjęcia poglądowe projektu"></span>*/
+    
+        #img_1{
+        background-image: url(teamfoto1.jpg);
+        float: left;
+        width: 500px;
+        height: 350px;
+        border-style: groove;
+        border-width: 10px;
+        border-color: rgba(13, 77, 77, 0.658);
+        
+        margin-left: 20px;
+        margin-top: 40px;
+        margin-right:0px;
+        max-width: 800px;
+        transition: background-image .2s;
+        transition: width .4s, height .4s;
+       
+
+    }
+    
+            #img_1:hover{
+            
+            background-image: url(teamfoto3.jpg);
+            width: 800px;
+            height: 650px;
+
+            }
+    
+        #about_project{
+        border-style: groove;
+        border-width: 10px;
+        border-color: rgba(13, 77, 77, 0.658);
+        padding: 10px;
+        clear: both;
+        float:center;
+        width: 200px;
+        height: 300px;
+        font-size: 15px;
+        text-align: center;
+        background-color:rgba(105, 29, 29, 0.239);
+        margin-left: 250px;
+        margin-right: 0px;
+        margin-top: 100px;
+        margin-bottom: 40px;
+        color: aliceblue;
+        transition: font-size 2s;
+        transition: width .4s;
+    }   
+    
+            #about_project:hover{
+                background-color: rgba(105, 29, 29, 0.63);
+                width: 900px;
+                font-size: 25px;
+                margin-right: 400px;
+    
+            }
+    
+        #footer{
+        width: 100%;
+        height:200px;
+        background-color: rgba(85, 0, 0, 0.164);
+        font-size: 20px;
+        color: aliceblue;
+        text-align: center;
+        transition: background-color 2s;
+        transition: font-size .1s;
+    
+    }
+    
+            #footer:hover{
+                background-color:  rgba(85, 0, 0, 0.739);
+                font-size: 30px;
+            }
+
+
+
 *{
     padding: 0;
     margin: 0;
