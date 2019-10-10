@@ -103,6 +103,12 @@ for(i of tab){
   
 }
 
+if(podobienstwo>tab_obraz1.length-2){
+  textSize(200)
+  
+      text('WIN',300,height/2)
+      textSize(10)
+    }
   }
 
  

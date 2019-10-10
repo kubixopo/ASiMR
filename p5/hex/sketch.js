@@ -13,8 +13,13 @@ function draw() {
   
   r++
   ty()
+ // angleMode(DEGREES)
+ // translate(width / 2, height / 2)
+  //rotate(20)
+push()
   kw.drawa()
   kw1.drawa()
+  pop()
 hexagon(250,250,0.4)
 }
 
@@ -44,17 +49,17 @@ let x=300,y=300;
   function ty(){
 
 if(keyIsDown(LEFT_ARROW)){
-	x--
+	x-=2
 
 }
 if(keyIsDown(RIGHT_ARROW)){
-	x++
+	x+=2
 }
 if(keyIsDown(DOWN_ARROW)){
-	y++
+	y+=2
 }
 if(keyIsDown(UP_ARROW)){
-	y--
+	y-=2
 }
 
 //translate(width / 2, height / 2)
