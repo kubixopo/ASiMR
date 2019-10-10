@@ -2,6 +2,7 @@ function setup() {
   createCanvas(496, 496);
   tab[0]=new przeszkoda_d(0)
   tab[1]= new przeszkoda_g(0)
+  tab[2]= new przeszkoda_b()
   //noStroke()
 }
 let c=true
@@ -13,8 +14,8 @@ function draw() {
   push()
 fill(100,120,200,80)
 if(r>0.5){
-translate(width,0)
-rotate(PI/2)
+//translate(width,0)
+//rotate(PI/2)
 }
 for(i of tab){
 
@@ -159,3 +160,25 @@ l++
 
 
   }
+
+
+function przeszkoda_b(){
+this.x=random(600,1000)
+this.y=random(200,300)
+this.t=true
+this.drawa=function(){
+  if(this.t){
+    push()
+    //noStroke()
+    fill(200,120,20,80)
+rect(this.x,this.y,50,20)
+pop()
+
+this.x-=4
+if(this.x<-100){
+  tab.push(new przeszkoda_b())
+  this.t=false
+}
+  }
+}
+}
