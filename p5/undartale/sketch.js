@@ -9,8 +9,11 @@ let c=true
 function draw() {
   //clear()
   background(170, 57, 57,0.6)
+  push()
+ clear()
   fill(0,200,0,120)
   ty()
+  pop()
   push()
 fill(100,120,200,80)
 if(r>0.5){
@@ -42,8 +45,8 @@ this.tr=true
 this.drawa=function(){
   if(r>0.5){
     push()
-   // translate(-width,0)
- // rotate(-(PI/2))
+   translate(-width,0)
+  rotate(-(PI/2))
   if(y>this.y && x>this.x && x<this.x+20){
     console.log('s')
     clear()
@@ -167,14 +170,17 @@ this.x=random(600,1000)
 this.y=random(200,300)
 this.t=true
 this.drawa=function(){
+  console.log(frameCount/500)
   if(this.t){
     push()
     //noStroke()
     fill(200,120,20,80)
 rect(this.x,this.y,50,20)
 pop()
-
-this.x-=4
+if(x>this.x && x<this.x+100 && y>this.y && y<this.y+20){
+  clear()
+}
+this.x-=frameCount/500
 if(this.x<-100){
   tab.push(new przeszkoda_b())
   this.t=false
