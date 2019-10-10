@@ -8,11 +8,11 @@ function setup() {
 }
 let c=true
 function draw() {
-  //clear()
+  clear()
   background(170, 57, 57,0.6)
   push()
- clear()
-  fill(0,200,0,120)
+ //clear()
+  fill(16,255,16,190)
   ty()
   pop()
   push()
@@ -175,8 +175,10 @@ if(x>this.x && x<this.x+100 && y>this.y && y<this.y+20){
 }
 this.x-=frameCount/500
 if(this.x<-100){
-  tab.push(new przeszkoda_b())
-  this.t=false
+  //tab.push(new przeszkoda_b())
+  this.x=random(600,1000)
+  this.y=random(150,350)
+ // this.t=false
 }
   }
 }
@@ -184,8 +186,9 @@ if(this.x<-100){
 //}
 
 function lose(){
-
-  clear()
+//fill(0,0,0)
+//rect(0,0,width,height)
+  //clear()
   r=random(0,1)
   x=250
   c=true
