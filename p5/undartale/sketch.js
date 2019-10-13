@@ -4,6 +4,10 @@ function setup() {
   tab[1]= new przeszkoda_g(0)
   tab[2]= new przeszkoda_b()
   tab[3]= new przeszkoda_l(0)
+  // tab[4]= new przeszkoda_k(0);
+ //tab[5]= new przeszkoda_k(180);
+ //tab[6]= new przeszkoda_k(270);
+ //tab[7]= new przeszkoda_k(90);
   //noStroke()
 }
 let c=true
@@ -20,9 +24,9 @@ fill(100,120,200,80)
 if(r>0.5){
 //translate(width,0)
 //rotate(PI/2)
-lorp=true
-}else{
-  lorp=false
+lorp=1
+}else if(r<0.5){
+  lorp=2
 }
 for(i of tab){
 
@@ -53,7 +57,8 @@ this.drawa=function(){
   // translate(-width,0)
  // rotate(-(PI/2))
 //}
-if(!lorp){
+//console.log(lorp)
+if(lorp==1){
  
   if(y>this.y && x>this.x && x<this.x+20){
     lose()
@@ -89,7 +94,7 @@ function przeszkoda_g(t){
   this.y=-100
   this.tr=true
   this.drawa=function(){
-    if(!lorp){
+    if(lorp==1){
     if(y<this.y+this.h && x>this.x && x<this.x+20){
      lose()
     }
@@ -115,6 +120,7 @@ function przeszkoda_g(t){
   }
 let x=200,y=250, skok=false
 let vx=1,vy=2, l=0
+let col=[0,0,0,255]
   function ty(){
     if(keyIsDown(LEFT_ARROW)){
 x-=2
@@ -150,9 +156,26 @@ y-=vy
 l++
 
 }
+/*c=get(x+21,y)
+if(c[0]==col[0] && c[1]==col[1] && c[2]==col[2]&& c[3]==col[3] ){
+  lose()
+}
+c=get(x-21,y)
+if(c[0]==col[0] && c[1]==col[1] && c[2]==col[2]&& c[3]==col[3] ){
+  lose()
+}
+c=get(x,y+21)
+if(c[0]==col[0] && c[1]==col[1] && c[2]==col[2]&& c[3]==col[3] ){
+  lose()
+}
+c=get(x,y-21)
+if(c[0]==col[0] && c[1]==col[1] && c[2]==col[2]&& c[3]==col[3] ){
+  lose()
+}
 
-
-
+if(mouseIsPressed){
+  console.log(get(mouseX,mouseY))
+}*/
 
   }
 
@@ -163,7 +186,7 @@ this.y=random(200,300)
 this.t=true
 this.drawa=function(){
   //if(!lorp){
-  console.log(frameCount/500)
+  //console.log(frameCount/500)
   if(this.t){
     push()
     //noStroke()
@@ -189,7 +212,16 @@ function lose(){
 //fill(0,0,0)
 //rect(0,0,width,height)
   //clear()
-  r=random(0,1)
+  if(lorp==1){
+    r=random(0,0.6)
+  }else{
+    r=random(0,4,1)
+  }
+  if(lorp==2){
+    x=400
+    y=100
+  }
+  
   x=250
   c=true
 y=250
@@ -197,7 +229,8 @@ clear()
 
 
 }
-let lorp=false
+//let lorp=1
+var lorp=1
 function przeszkoda_l(t){
   this.x=-100
   
@@ -207,7 +240,7 @@ function przeszkoda_l(t){
   this.tr=true
   this.dx=random(0,400)
   this.drawa=function(){
-    if(lorp){
+    if(lorp==2){
     if(y<this.y+20 && x>this.x && x<this.x+this.h && y>this.y){
      lose()
     }
@@ -231,3 +264,54 @@ function przeszkoda_l(t){
   
   
   }
+
+
+  /*function przeszkoda_k(a){
+    this.y=300
+    this.a=a
+    this.state=2
+    this.pa=a
+    this.drawa= function(){
+      if(lorp==3){
+      //console.log(this.pa)
+      if(this.state!=0){
+      push()
+      rectMode(CENTER)
+      translate(width/2,height/2)
+      rotate(this.a)
+      fill(80,200,90,60)
+      rect(0,this.y,200,20)
+      this.y-=0.3
+     
+      //console.log(this.y)
+      pop()
+    if(this.state==2){
+      this.a++
+    }
+    
+    
+    
+    if(this.y<30){
+      this.state=0
+      clear()
+      if(this.pa==0){
+         q=new przeszkoda_k(90)
+      }
+      if(this.pa==90){
+         q=new przeszkoda_k(180)
+      }
+      if(this.pa==180){
+         q=new przeszkoda_k(270)
+      }
+      if(this.pa==270){
+         q=new przeszkoda_k(0)
+      }
+      
+      tab.push(q)
+    }
+    
+      }
+    
+      }
+    }
+    }*/
