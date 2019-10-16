@@ -65,7 +65,7 @@ function kolka() {
 
 //###################### ZMIENNE #####################################
 let koniec = false;
-let time = 20;
+let time = 0;
 let koloX = 300;
 let koloY = 300;
 //###################### ZMIENNE ######################################
