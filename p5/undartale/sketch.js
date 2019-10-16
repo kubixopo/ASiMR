@@ -11,7 +11,13 @@ function setup() {
   //noStroke()
 }
 let c=true
+
 function draw() {
+  //console.log(r)
+  console.log(lorp)
+  if(lorp!=3){
+    tabb=[]
+  }
   clear()
   background(170, 57, 57,0.6)
   push()
@@ -21,18 +27,25 @@ function draw() {
   pop()
   push()
 fill(100,120,200,80)
-if(r>0.5){
+/*if(r>0.3 && r<0.6){
 //translate(width,0)
 //rotate(PI/2)
 lorp=1
-}else if(r<0.5){
+}
+ if(r<0.3){
   lorp=2
 }
+if(r>0.6){
+  lorp=3
+}*/
 for(i of tab){
 
 i.drawa()
 
 
+}
+for(i of tabb){
+  i.drawa()
 }
 if(c){
   clear()
@@ -42,6 +55,7 @@ pop()
 }
 
 let tab=[]
+tabb=[]
 
 function przeszkoda_d(t){
 this.x=0
@@ -181,8 +195,13 @@ if(mouseIsPressed){
 
 
 function przeszkoda_b(){
-this.x=random(600,1000)
-this.y=random(200,300)
+  if(lorp==3){
+    this.x=random(500,1500)
+    this.y=random(20,480)
+  }else{
+  this.x=random(600,1000)
+  this.y=random(150,350)
+  }
 this.t=true
 this.drawa=function(){
   //if(!lorp){
@@ -194,13 +213,25 @@ this.drawa=function(){
 rect(this.x,this.y,50,20)
 pop()
 if(x>this.x && x<this.x+100 && y>this.y && y<this.y+20){
-  lose()
+ lose()
+ 
 }
-this.x-=frameCount/500
+if(frameCount<1000){
+  this.x-=(frameCount/500)+2
+}else{
+  this.x-=frameCount/500
+}
+
+
 if(this.x<-100){
   //tab.push(new przeszkoda_b())
+  if(lorp==3){
+    this.x=random(500,1500)
+    this.y=random(20,480)
+  }else{
   this.x=random(600,1000)
   this.y=random(150,350)
+  }
  // this.t=false
 }
   }
@@ -213,20 +244,59 @@ function lose(){
 //rect(0,0,width,height)
   //clear()
   if(lorp==1){
-    r=random(0,0.6)
+   // r=random(0,1)
+    if(random(0,2)>0.5){
+      lorp=2
+      tab=[]
+      tab.push(new przeszkoda_l(0))
+    }else{
+      lorp=3
+      tab=[]
+    }
+  }else if(lorp==2){
+ // r=random(0.2,0.1)
+ if(random(0,1)>0.5){
+    lorp=1
+    tab=[]
+    tab.push(new przeszkoda_d(0))
+    tab.push(new przeszkoda_g(0))
   }else{
-    r=random(0,4,1)
+    lorp=3
+    tab=[]
   }
-  if(lorp==2){
-    x=400
-    y=100
+  }else if(lorp==3){
+   //r=random(0,0.7)
+  if(random(0,1)>0.5){
+    lorp=1
+    tab=[]
+    tab.push(new przeszkoda_d(0))
+    tab.push(new przeszkoda_g(0))
+  }else{
+    lorp=2
+    tab=[]
+    tab.push(new przeszkoda_l(0))
+  }
   }
   
+  tab.push(new przeszkoda_b())
   x=250
   c=true
 y=250
 clear()
+if(lorp==1){
+  x=400
+  y=100
+  tabb=[]
+}
+tabb=[]
+if(lorp==3){
+  for(let i=0;i<10;i++){
+tabb.push(new przeszkoda_b())
+  }
 
+}else{
+  tabb=[]
+}
 
 }
 //let lorp=1
@@ -249,7 +319,7 @@ function przeszkoda_l(t){
     }
   rect(this.x,this.y,this.h,20)
   this.y++
-  if(this.y>random(40,100) && this.t==0){
+  if(this.y>random(60,120) && this.t==0){
     let q=new przeszkoda_l(0)
   tab.push(q)
   this.t=1
