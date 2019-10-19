@@ -35,7 +35,7 @@ function sterowanie() {
       koloY += 10;
     }
   }
-  console.log("STEROWANIE DZIAŁA!")
+  
 }
 let poziom = 1
 let nextLevelX = 200;
@@ -65,7 +65,7 @@ function kolka() {
 
 //###################### ZMIENNE #####################################
 let koniec = false;
-let time = 0;
+let time = 85;
 let koloX = 300;
 let koloY = 300;
 //###################### ZMIENNE ######################################
@@ -96,7 +96,7 @@ function draw() {
     if (koniec == false) {
       for (i of tab) {
         i.drawa();
-        console.log("pozdro dla korwina najlepsza partia kc JD")
+        
       }
     }
     else {
@@ -118,13 +118,11 @@ function draw() {
       textSize(18)
       fill("black")
       text("Next Level", 205, 430)
-      console.log("działa?")
+      
     }
   }
   //@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@ POZIOM 2 @@@@@@@@@@@@@@@@@@@@@@@@@
   if (poziom == 2) {
-    koniec = false;
-    drawa();
     sterowanie()
     fill(127, 20, 270, 120)
     textSize(50);
@@ -132,15 +130,71 @@ function draw() {
     background(142, 164, 33, 120)
     fill(225, 0, 68, 120)
     ellipse(koloX, koloY, 20)
+    if (time >= 60) {
+      koniec = true;
+      wygranko()
+      textSize(50);
+      fill("red");
+      
+      if (koloX > nextLevelX && koloX < nextLevelX + 100 && koloY > nextLevelY && koloY < nextLevelY + 50) {
+        poziom = 3
+      }
+      
+    }
+    
+    else{
+    koniec = false;
+    drawa();
+    
     if (koniec == false) {
       for (i of tab) {
         i.drawa();
-
       }
     }
+  }
+    
+    function wygranko() {
+      fill("black")
+      textSize(250)
+      text("WIN", 0, 250);
+      fill("white")
+      textSize(18)
+      
+      
+    }
+    
+  }
 
-
-
+  if(poziom ==3){
+    sterowanie()
+    fill(27, 120, 270, 120)
+    textSize(50);
+    text(time, 230, 50)
+    background(242, 64, 133, 120)
+    fill(125, 0, 168, 120)
+    ellipse(koloX, koloY, 20)
+    if (time >= 90) {
+      koniec = true;
+      wygranko()
+      textSize(50);
+      fill("red");
+      
+      if (koloX > nextLevelX && koloX < nextLevelX + 100 && koloY > nextLevelY && koloY < nextLevelY + 50) {
+        poziom=4
+      }
+      
+    }
+    
+    else{
+    koniec = false;
+    drawa();
+    
+    if (koniec == false) {
+      for (i of tab) {
+        i.drawa();
+      }
+    }
+  }
   }
 }
 
