@@ -65,7 +65,7 @@ function kolka() {
 
 //###################### ZMIENNE #####################################
 let koniec = false;
-let time = 85;
+let time = 0;
 let koloX = 300;
 let koloY = 300;
 //###################### ZMIENNE ######################################
@@ -132,7 +132,7 @@ function draw() {
     ellipse(koloX, koloY, 20)
     if (time >= 60) {
       koniec = true;
-      wygranko()
+      wygranko();
       textSize(50);
       fill("red");
       
