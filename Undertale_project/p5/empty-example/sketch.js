@@ -68,6 +68,7 @@ let koniec = false;
 let time = 0;
 let koloX = 300;
 let koloY = 300;
+rtime1 = "GOAL : 30"
 //###################### ZMIENNE ######################################
 
 
@@ -77,7 +78,9 @@ function draw() {
   if (poziom == 1) {
     kolka();
     sterowanie()
-    //!!!!!!!!@@@KONIEC STEROWAŃSKA@@@!!!!!!!//
+    fill("black")
+    text(rtime1,115,100)
+    //!!!!!!!!@@@@ONIEC STEROWAŃSKA@@@!!!!!!!//
 
     if (time >= 30) {
       koniec = true;
@@ -110,6 +113,7 @@ function draw() {
       }
     }
     function wygranko() {
+      rtime1 == ""
       fill("black")
       textSize(250)
       text("WIN", 0, 250);
@@ -118,6 +122,7 @@ function draw() {
       textSize(18)
       fill("black")
       text("Next Level", 205, 430)
+
       
     }
   }
