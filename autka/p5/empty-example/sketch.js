@@ -2,6 +2,7 @@
 function setup() {
   createCanvas(500,500)// put setup code here
   tab=[new kwadrat()]
+  
 }
 
 let graczX = 250;
@@ -16,6 +17,7 @@ function draw() {
     i.drawa()
   }
   fill(200,120,50,30)
+  
   ellipse(graczX,graczY,20)
   
   if(keyIsDown(LEFT_ARROW)){
