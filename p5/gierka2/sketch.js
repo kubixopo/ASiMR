@@ -5,8 +5,38 @@ function setup() {
   tab[0] = new kolka()
   tab[1] = new kolka()
   tab[2] = new kolka()
-
-
+  //colorMode(HSB);
+  stroke(255);
+  strokeWeight(4);
+  tab1[0] = new kulki()
+  tab1[1] = new kulki()
+  tab1[2] = new kulki()
+  tab1[3] = new kulki()
+}
+function kulki(){
+console.log("123")
+this.x = random(0)
+this.y = random(0,450)
+this.v = random(1,5)
+this.s = true;
+this.drawb = function(){
+  if(this.s){
+  fill("white")
+  ellipse(this.x,this.y,5)
+  this.x +=this.v+25
+  if(this.x>500){
+    tab1.push(new kulki())
+    this.s = false;
+  }
+}
+}
+}
+function koniec123(){
+  clear;
+  background(0,0,0)
+  fill("white")
+  textSize(150)
+  text("WIN!",70,300)
 }
 function sterowanie() {
   if (koloX > 485) {
@@ -35,9 +65,8 @@ function sterowanie() {
       koloY += 10;
     }
   }
-  
+
 }
-let poziom = 1
 let nextLevelX = 200;
 let nextLevelY = 400;
 let tab = [];
@@ -62,19 +91,39 @@ function kolka() {
 
   }
 }
-
 //###################### ZMIENNE #####################################
 let koniec = false;
+let poziom = 0;
 let time = 0;
 let koloX = 300;
 let koloY = 300;
+tab1 = []
 rtime1 = "GOAL : 30"
 rtime2 = "GOAL : 60"
 rtime3 = "GOAL : 90"
 //###################### ZMIENNE ######################################
-
-
 function draw() {
+  //################### POZIOM 0 #######################################
+  if(poziom == 0){
+    background("red")
+    textSize(80)
+    text("WELCOME!",30,100)
+    sterowanie()
+    fill("white")
+    rect(nextLevelX, nextLevelY, 100, 50)
+    textSize(18)
+    fill("black")
+    text("START", 220, 430)
+    fill("black")
+    ellipse(koloX,koloY,20)
+
+    if (koloX > nextLevelX && koloX < nextLevelX + 100 && koloY > nextLevelY && koloY < nextLevelY + 50) {
+      poziom = 1
+    }
+      
+  }
+
+//################################### POZIOM 0 ###################################
 
   //@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@ POZIOM 1 @@@@@@@@@@@@@@@@@@@@@@@@@//
   if (poziom == 1) {
@@ -82,8 +131,6 @@ function draw() {
     sterowanie()
     fill("black")
     text(rtime1,115,100)
-    //!!!!!!!!@@@@ONIEC STEROWAŃSKA@@@!!!!!!!//
-
     if (time >= 30) {
       koniec = true;
       textSize(50);
@@ -97,18 +144,13 @@ function draw() {
     textSize(50);
     text(time, 230, 50)
     fill(19, 131, 131, 120)
-
     if (koniec == false) {
       for (i of tab) {
         i.drawa();
-        
       }
     }
     else {
-
       wygranko()
-
-
       //@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@  POZIOM 1 @@@@@@@@@@@@@@@@@@@@@@
       if (koloX > nextLevelX && koloX < nextLevelX + 100 && koloY > nextLevelY && koloY < nextLevelY + 50) {
         poziom = 2
@@ -125,7 +167,7 @@ function draw() {
       rect(nextLevelX, nextLevelY, 100, 50)
       textSize(18)
       fill("black")
-      text("Next Level", 205, 430)
+      text("Next Level", 200, 430)
       fill("black")
       textSize(250)
       text("WIN", 0, 250);
@@ -150,6 +192,19 @@ function draw() {
       koniec = true;
       wygranko();
       wygranko();
+      fill("black")
+      textSize(250)
+      text("WIN", 0, 250);
+      fill("white")
+      rect(nextLevelX, nextLevelY, 100, 50)
+      textSize(18)
+      fill("black")
+      text("Next Level", 200, 430)
+      fill("black")
+      textSize(250)
+      text("WIN", 0, 250);
+      fill("white")
+      textSize(18)
       textSize(50);
       fill("red");
       
@@ -186,6 +241,8 @@ function draw() {
     
   }
 
+  //#################################### POZIOM 2 ########################################
+
   if(poziom ==3){
     fill("black")
     text(rtime3,115,100)
@@ -197,14 +254,18 @@ function draw() {
     fill(125, 0, 168, 120)
     ellipse(koloX, koloY, 20)
     if (time >= 90) {
+      kulki()
       koniec = true;
-      wygranko()
+      clear();
       textSize(50);
       fill("red");
-      
-      if (koloX > nextLevelX && koloX < nextLevelX + 100 && koloY > nextLevelY && koloY < nextLevelY + 50) {
-        poziom=4
+      koniec123()
+      for(i of tab1){
+        fill("white")
+        i.drawb()
       }
+      
+     
       
     }
     
@@ -220,7 +281,7 @@ function draw() {
   }
   }
 }
-
+//######################################### POZIOM 3 ##########################################
 
 
 
