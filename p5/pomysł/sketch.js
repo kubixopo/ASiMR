@@ -11,7 +11,7 @@ let tab=[]
 let wyp=[]
 let runda=true
 function draw(){
-//background(120)
+background(120)
   for(i of tab){
     i.drawa()
   }
