@@ -61,14 +61,20 @@ function wypelnienie(x,y,k){
       for(i of tab){
         if(dist(i.x,i.y,this.x,this.y)<11){
          //runda=false
+         
+        // this.k=int(random(1,8))
+        // this.x-=10
+         //this.y-=10
           this.s=0
           break;
+          
         }
       }
   
   
-     if(this.x>480|| this.x<20 || this.y>480 || this.y<20){
+     if(this.x>500|| this.x<0 || this.y>500 || this.y<0){
      runda=false
+     text("TRY AGAIN",200,250 )
        this.s=0
        }
     noStroke()
