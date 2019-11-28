@@ -4,36 +4,33 @@
     font-family: 'Big Shoulders Display', cursive;
 
 }
+
 .container{
     background-color: rgba(85, 0, 0, 0.39);
     text-align:center;
     width: 100%;
 
 }
+
 .container span{
 text-transform: uppercase;
 display: block;
 }
 
-
 .text1{
 color: white;
-font-size: 67px;
+font-size: 37px;
 font-style: bold;
 font-weight: 700;
 letter-spacing: 8px;
-margin-bottom: 10px;
 background-color: transparent;
 position: relative;
 animation: text 1.7s 1;
-
-
-
-
 }
+
 .text2{
 
-    font-size: 45px;
+    font-size: 15px;
     color: rgb(255, 255, 255);
     animation: text1 2s 1;
 }
@@ -41,37 +38,256 @@ animation: text 1.7s 1;
 @keyframes text{
 0%{
     color: rgba(255, 255, 255, 0);
-    margin-bottom: -20px;
-
+    margin-bottom: -10px;
 }
 
 30%{
     letter-spacing: 8px;
-    margin-bottom: -20px;
+    margin-bottom: -10px;
 }
 
 85%{
 
     letter-spacing: 8px;
-    margin-bottom: -20px;
+    margin-bottom: -10px;
 }
 }
 
 @keyframes text1{
-    0%{
-        color: rgba(255, 255, 255, 0);
-        margin-bottom: -20px;
+0%{
+    color: rgba(255, 255, 255, 0);
+    margin-bottom: -10px;
 
-    }
+}
 
-    30%{
-        letter-spacing: 8px;
-        margin-bottom: -20px;
-    }
+30%{
+    letter-spacing: 8px;
+    margin-bottom: -10px;
+}
 
-    85%{
+85%{
 
-        letter-spacing: 8px;
-        margin-bottom: -20px;
-    }
-    }
+    letter-spacing: 8px;
+margin-bottom: -10px;
+}
+}
+
+#content
+{
+    
+    width: 100%;
+    height: 1000px;
+    background-image: url(background_image.jpg);
+    background-size:cover;
+    background-repeat: no-repeat;
+}
+
+#logo
+{
+    text-align: center;
+    font-family: 'Big Shoulders Display', cursive;
+    background-color: rgba(170, 57, 57, 0.602);
+    padding: 10px;
+    font-size: 30px;
+    color :rgba(240, 248, 255, 0.774);
+}
+
+#kloc
+{
+    width: 680px;
+    height: 540px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+#kloc5
+{
+    width: 1200px;
+    height: 540px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+#gierka
+{
+    width: 500px;
+    height: 500px;
+    background-color: rgba(85, 0, 0, 0.739);
+    border-style: groove;
+    border-width: 10px;
+    border-color: rgba(95, 17, 17, 0.863);
+    margin-top: 20px;
+}
+
+#gierka5
+{
+    width: 1000px;
+    height: 500px;
+    background-color: rgba(85, 0, 0, 0.739);
+    border-style: groove;
+    border-width: 10px;
+    border-color: rgba(95, 17, 17, 0.863);
+    margin-top: 20px;
+}
+
+ul
+{
+    list-style:none;
+    padding: 0px;
+}
+
+.nawigator
+{
+    height: 450px;
+    width: 75px;
+    float: right;
+}
+
+.nawigator a
+{
+    width: 75px;
+    height: 75px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    overflow: hidden;
+    display: flex;
+    float: right;
+    font-size: 20px;
+}
+
+.nawigator a:hover
+{
+
+    background-color: rgba(13, 77, 77, 0.658);
+    font-size: 30px;
+}
+
+.nawigator label
+{
+    font-family: 'Big Shoulders Display', cursive;
+    font-size: 20px;
+    display: block;
+    cursor: pointer;
+    width: 75px;
+    height: 75px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    overflow: hidden;
+    display: flex;
+    float: right;
+    font-size: 30px;
+    color:white;
+    border-top-style: groove;
+    border-right-style: groove;
+    border-left-style: groove;
+    border-width: 10px;
+    border-color: rgba(95, 17, 17, 0.863);
+    background-color:rgba(85, 0, 0, 0.739);
+    margin-right: 20px;
+}
+
+.nawigator label:hover
+{
+    background-color: rgba(13, 77, 77, 0.658);
+}
+input#checkbox1
+{
+    display: none;
+}
+
+.Menu
+{
+    height: 0px;
+    width: 75px;
+    overflow: hidden;
+    background-color:rgba(85, 0, 0, 0.739);
+    font-family: 'Big Shoulders Display', cursive;
+    color: aliceblue;
+    float: right;
+    margin-right: 20px;
+    transition: height .5s;
+    border-bottom-style: groove;
+    border-right-style: groove;
+    border-left-style: groove;
+    border-width: 10px;
+    border-color: rgba(95, 17, 17, 0.863);
+    background-color:rgba(85, 0, 0, 0.739);
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+input:checked ~ .Menu
+{
+  opacity: 1;
+  height: 450px;
+    opacity: 1;
+
+}
+
+.kreski_hehe
+{
+    margin: 0 auto;
+    width: 30px;
+    height: 30px;
+    position: relative;
+    display: block;
+}
+
+.krecha1, .krecha2, .krecha3
+{
+    padding: 0;
+    width: 30px;
+    height: 4px;
+    background-color: #ffffff;
+    display: block;
+    border-radius: 4px;
+    margin-left: auto;
+    margin-right: auto;
+    position: absolute;
+    transition: all 0.2s ease-in-out;
+    opacity: 1;
+}
+
+.krecha1
+{
+    top: 0px;
+}
+
+.krecha2
+{
+    top: 13.5px;
+}
+
+.krecha3
+{
+    bottom: 0px;
+}
+
+.checkbox1:checked + label > .kreski_hehe > .krecha1{
+    transform: rotate(45deg);
+    transform-origin: 5%;
+    width: 41px
+}
+
+.checkbox1:checked + label > .kreski_hehe > .krecha2 {
+    transform: opacity 0;
+    background-color: transparent;
+}
+
+
+.checkbox1:checked + label > .kreski_hehe > .krecha3 {
+    transform-origin: 5%;
+    transform: rotate(-45deg);
+    width: 41px;
+}
+
+a
+{
+    color:currentColor;
+    text-decoration: none;
+}
