@@ -1,11 +1,12 @@
 function setup() {
   createCanvas(496, 496);
   rectMode(CENTER)
-  translate(width / 2, height / 2)
-  rotate(PI/9)
+ // translate(width / 2, height / 2)
+ // rotate(PI/9)
   //frameRate(30)
   kw=new rec(10,250,250,30)
   kw1=new rec(250,10,30,250)
+  angleMode(DEGREES)
 }
 let r=0
 function draw() {
@@ -13,8 +14,13 @@ function draw() {
   
   r++
   ty()
+ // angleMode(DEGREES)
+ // translate(width / 2, height / 2)
+  //rotate(20)
+push()
   kw.drawa()
   kw1.drawa()
+  pop()
 hexagon(250,250,0.4)
 }
 
@@ -44,17 +50,17 @@ let x=300,y=300;
   function ty(){
 
 if(keyIsDown(LEFT_ARROW)){
-	x--
+	x-=2
 
 }
 if(keyIsDown(RIGHT_ARROW)){
-	x++
+	x+=2
 }
 if(keyIsDown(DOWN_ARROW)){
-	y++
+	y+=2
 }
 if(keyIsDown(UP_ARROW)){
-	y--
+	y-=2
 }
 
 //translate(width / 2, height / 2)
@@ -62,13 +68,9 @@ if(keyIsDown(UP_ARROW)){
 fill('lime')
 ellipse(x, y,20)
 fill('rgba(255, 255, 100, .25)');
-rotate(0)
+//rotate(0)
 }
-function keyDown(){
-	if(key=="LEFT_ARROW"){
-		console.log('a')
-	}
-}
+
 
 
 function rec(x1,y1,h,w){
@@ -80,7 +82,16 @@ this.w=w
 
 
 this.drawa=function(){
-if(this.state){
+	push();
+//	translate(width,height)
+		//rotate(180)
+//	translate(width,0)
+	//	rotate(90)
+	//translate(0,0)
+		//rotate(0)
+	//translate(0,height)
+	//	rotate(PI/2)
+	if(this.state){
 	if(x>this.x-10 && x<this.x+10 && y>this.y-120 && y<this.y+120 || dist(250,250,x,y)<70){
 		console.log('l')
 		fill('white')
@@ -140,7 +151,7 @@ if(this.h<150){
 
 
 }
-	
+	pop()
 	}
 	
 
