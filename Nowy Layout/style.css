@@ -8,16 +8,36 @@ body {
   font-family: 'Signika', sans-serif;
 }
 
-.wrapper {
-  background-color: #EFEEEE;
-  height: 100vh;
+.japierdole {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
   width: 100%;
+  height: 100vh;
+  background-color: #EFEEEE;
+}
+
+.start__page {
+  background-color: #EFEEEE;
+  height: 720px;
+  width: 1280px;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .logo {
   border: #325D79 2px solid;
   width: 450px;
   height: 150px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 150px;
 }
 
 .logo__text {
@@ -50,8 +70,28 @@ body {
 .about_us {
   font-size: 24px;
   color: #F26627;
-  float: left;
-  clear: both;
+  width: 180px;
+  height: 55px;
+  margin-left: 55px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.about_us:first-of-type {
+  margin-top: 150px;
+}
+
+.about_us:hover {
+  background-color: #F26627;
+  color: #EFEEEE;
+}
+
+.line {
+  width: 178px;
+  height: 0px;
+  border: #325D79 1px solid;
+  margin-left: 55px;
 }
 
 .circle {
@@ -60,13 +100,13 @@ body {
   background-color: transparent;
   border: 2px solid #325D79;
   border-radius: 50%;
-  margin-top: 70px;
   display: flex;
   justify-content: center;
   align-items: center;
-  position: relative;
   margin-left: auto;
   margin-right: auto;
+  margin-bottom: 21px;
+  margin-top: 6px;
 }
 
 .circle__arrow {
@@ -97,4 +137,13 @@ body {
   transform: rotate(45deg);
   margin-left: 3px;
   margin-top: 8px;
+}
+
+.informations {
+  width: 100%;
+  height: 1280px;
+  background-color: #EFEEEE;
+  display: grid;
+  grid-template-columns: 2, 1fr;
+  grid-gap: 160px;
 }

@@ -16,22 +16,38 @@ $blue: #325D79;
     margin-right: auto;
 }
 
-.wrapper {
-    background-color: #EFEEEE;
-    height: 100vh;
+.japierdole {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
     width: 100%;
+    height: 100vh;
+    background-color: #EFEEEE;
+}
+
+.start__page {
+    background-color: #EFEEEE;
+    height: 720px;
+    width: 1280px;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    @include center;
 }
 
 .logo {
     border:$blue 2px solid;
     width: 450px;
     height: 150px;
-
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    @include center;
+    margin-top: 150px;
 
     &__text {
         font-size: 144px;
-        color: $orange
-        
+        color: $orange;
     }
 }
 
@@ -58,8 +74,28 @@ $blue: #325D79;
 .about_us {
     font-size: 24px;
     color: $orange;
-    float: left;
-    clear: both;
+    width: 180px;
+    height: 55px;
+    margin-left: 55px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    &:first-of-type {
+        margin-top: 150px;
+    }
+
+    &:hover {
+        background-color: $orange;
+        color: #EFEEEE;
+    }
+}
+
+.line {
+    width: 178px;
+    height: 0px;
+    border: $blue 1px solid;
+    margin-left: 55px;
 }
 
 .circle {
@@ -68,12 +104,12 @@ $blue: #325D79;
     background-color: transparent;
     border: 2px solid $blue;
     border-radius: 50%;
-    margin-top: 70px;
     display: flex;
     justify-content: center;
     align-items: center;
-    position: relative;
     @include center;
+    margin-bottom: 21px;
+    margin-top: 6px;
 
     &__arrow {
         width: 0px;
@@ -93,7 +129,7 @@ $blue: #325D79;
         margin-left: -3px;
         margin-top: 8px;
     }
-    
+
     &__arrow--right {
         width: 0px;
         height: 7px;
@@ -104,5 +140,18 @@ $blue: #325D79;
         margin-left: 3px;
         margin-top: 8px;
     }
+
+}
+
+.informations {
+    width: 100%;
+    height: 1280px;
+    background-color: #EFEEEE;
+    display: grid;
+    grid-template-columns: (2, 1fr);
+    grid-gap: 160px;
+}
+
+.chuj {
 
 }
