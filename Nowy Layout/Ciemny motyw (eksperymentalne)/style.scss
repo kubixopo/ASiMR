@@ -22,11 +22,11 @@ $blue: #325D79;
     flex-direction: column;
     width: 100%;
     height: 100vh;
-    background-color: #EFEEEE;
+    background-color: #121212;
 }
 
 .start__page {
-    background-color: #EFEEEE;
+    background-color: #121212;
     height: 720px;
     width: 1280px;
     display: flex;
@@ -43,7 +43,7 @@ $blue: #325D79;
     align-items: center;
     justify-content: center;
     @include center;
-    margin-top: 100px;
+    margin-top: 150px;
 
     &__text {
         font-size: 144px;
@@ -58,22 +58,42 @@ $blue: #325D79;
     text-align: center;
     text-transform: uppercase;
     @include center;
-    margin-top: 10px;
 }
 
-a {
+.play {
     background-color: transparent;
     border: #C0392B 1px solid;
+    color: #C0392B;
     width: 200px;
     height: 50px;
     font-size: 24px;
-    margin-top: 70px;
+    margin-top: 50px;
     @include center;
-    text-decoration: none;
-    color: #C0392B;
+}
+
+a {
+    font-size: 24px;
+    color: $orange;
+    width: 180px;
+    height: 55px;
+    margin-left: 55px;
+    display: flex;
     align-items: center;
     justify-content: center;
-    display: flex;
+    text-decoration: none;
+
+
+    &:hover {
+        background-color: $orange;
+        color: #EFEEEE;
+    }
+}
+
+.line {
+    width: 178px;
+    height: 0px;
+    border: $blue 1px solid;
+    margin-left: 55px;
 }
 
 .circle {
@@ -86,8 +106,8 @@ a {
     justify-content: center;
     align-items: center;
     @include center;
-    margin-bottom: 50px;
-    margin-top: 100px;
+    margin-bottom: 21px;
+    margin-top: 6px;
 
     &__line {
         width: 0px;
@@ -140,32 +160,27 @@ a {
     height: 100vh;
     display: flex;
     justify-content: center;
-    align-items: center;
-    background-color: #EFEEEE;
+    background-color: #121212;
 }
 
 .i_dont_know_how_name_it {
     width: 1280px;
-    height: 650px;
-    background-color: #EFEEEE;
+    height: 720px;
+    background-color: #121212;
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     grid-gap: 160px;
-    margin-top: 50px;
-    border: 2px $blue solid;
-    margin-bottom: 50px;
-    box-shadow: 0px 0px 12px 4px #98D7D1;
+    margin-top: 30px;
 }
 
 .left {
     grid-column: 1;
     width: 480px;
-    height: 500px;
+    height: 170px;
     display: flex;
     justify-content: center;
     flex-direction: column;
     margin-left: 80px;
-    margin-top: 40px;
 
     h1 {
         font-size: 64px;
@@ -177,12 +192,6 @@ a {
         color: $orange;
         font-size: 24px;
         margin-top: -30px;
-    }
-
-    img {
-        width: 486px;
-        height: 324px;
-        border: 2px $blue solid;
     }
 }
 
@@ -194,7 +203,6 @@ a {
     justify-content: center;
     flex-direction: column;
     margin-right: 80px;
-    margin-top: 50px;
 
     h1 {
         font-size: 64px;
@@ -205,6 +213,5 @@ a {
     p {
         color: $orange;
         font-size: 24px;
-        margin-top: -30px;
     }
 }
