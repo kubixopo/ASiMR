@@ -20,6 +20,7 @@ body {
   align-items: center;
   justify-content: center;
   flex-direction: column;
+  position: relative;
 }
 
 .box__logo {
@@ -37,7 +38,7 @@ body {
   height: 40px;
   display: flex;
   align-items: center;
-  margin-top: 5px;
+  margin-top: 20px;
 }
 
 .box__navigation--item {
@@ -49,23 +50,35 @@ body {
   text-decoration: none;
 }
 
-.box__navigation--item > p {
+.box__navigation--item--paragraph {
   cursor: pointer;
   font-size: 20px;
   color: #F26627;
   margin-left: 0px;
+  animation: slideleft .5s both;
+  height: 40px;
+  width: 206px;
 }
 
-.box__navigation--item > p:hover {
-  animation: text__slide 1s both;
+.box__navigation--item--paragraph:hover {
+  animation: slide 0.5s both;
 }
 
-@keyframes text__slide {
+@keyframes slide {
   0% {
     margin-left: 0px;
   }
   100% {
-    margin-left: 40px;
+    margin-left: 50px;
+  }
+}
+
+@keyframes slideleft {
+  0% {
+    margin-left: 50px;
+  }
+  100% {
+    margin-left: 0px;
   }
 }
 
@@ -77,7 +90,7 @@ body {
 .game {
   border: #325D79 2px solid;
   height: 500px;
-  margin-top: 61px;
+  margin-top: 50px;
 }
 
 @media (min-height: 950px) {
