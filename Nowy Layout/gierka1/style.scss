@@ -1,0 +1,109 @@
+html {
+    box-sizing: border-box;
+}
+
+$orange: #F26627;
+$blue: #325D79;
+$white: #EFEEEE;
+
+body {
+    padding: 0;
+    margin: 0;
+    background-color: $white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    font-family: 'Signika', sans-serif;
+}
+
+.box {
+    width: 1280px;
+    height: 720px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    position: relative;
+
+    &__logo {
+        height: 60px;
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: #98D7D1;
+        font-size: 55px;
+    }
+
+    &__navigation {
+        width: 1240px;
+        height: 40px;
+        display: flex;
+        align-items: center;
+        margin-top: 20px;
+
+        &--item {
+            width: 206px;
+            text-align: center;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-decoration: none;
+
+
+            &--paragraph {
+                cursor: pointer;
+                font-size: 20px;
+                color: $orange;
+                margin-left: 0px;
+                animation: slideleft .5s both;
+                height: 40px;
+                width: 206px;
+
+                &:hover {
+                    animation: slide.5s both;
+                }
+            }
+        }
+    }
+}
+
+@keyframes slide {
+
+    0% {
+        margin-left: 0px;
+    }
+
+    100% {
+        margin-left: 50px;
+    }
+}
+
+@keyframes slideleft {
+
+    0% {
+        margin-left: 50px;
+    }
+
+    100% {
+        margin-left: 0px;
+    }
+}
+
+.line {
+    width: 1240px;
+    border: 2px solid $blue;
+}
+
+.game {
+    border: $blue 2px solid;
+    height: 500px;
+    margin-top: 50px;
+}
+
+@media (min-height: 950px) {
+    .box {
+        margin-top: 100px;
+    }
+}
