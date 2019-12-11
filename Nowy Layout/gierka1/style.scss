@@ -17,31 +17,21 @@ body {
     font-family: 'Signika', sans-serif;
 }
 
-.box {
-    width: 1280px;
-    height: 720px;
+.box__navigation {
+    width: 1244px;
+    height: 48px;
     display: flex;
     align-items: center;
+    margin-top: 30px;
     justify-content: center;
-    flex-direction: column;
-    position: relative;
 
-    &__logo {
-        height: 60px;
+    &--list {
         width: 100%;
+        height: 100%;
         display: flex;
         align-items: center;
         justify-content: center;
-        color: #98D7D1;
-        font-size: 55px;
-    }
-
-    &__navigation {
-        width: 1240px;
-        height: 40px;
-        display: flex;
-        align-items: center;
-        margin-top: 20px;
+        padding: 0;
 
         &--item {
             width: 206px;
@@ -50,60 +40,130 @@ body {
             align-items: center;
             justify-content: center;
             text-decoration: none;
+            cursor: pointer;
+            font-size: 20px;
+            margin-left: 0px;
+            animation: slideleft .5s both;
+            height: 100%;
+            width: 206px;
+            float: left;
+            animation: color1 .5s both;
 
-
-            &--paragraph {
-                cursor: pointer;
-                font-size: 20px;
+            a {
+                text-decoration: none;
                 color: $orange;
-                margin-left: 0px;
-                animation: slideleft .5s both;
-                height: 40px;
-                width: 206px;
+            }
+
+            &:nth-child(1) {
+                font-size: 32px;
+                font-weight: 700;
+                margin-left: -10px;
+            }
+
+            &:hover {
+                animation: slide.5s both;
+                animation: color2 .5s both;
+            }
+
+            span {
+                color: $blue;
+                font-size: 20px;
+                height: 100%;
+                width: 100%;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                animation: colors2 .5s both;
 
                 &:hover {
-                    animation: slide.5s both;
+                    animation: colors1 .5s both;
                 }
             }
         }
+
     }
 }
 
-@keyframes slide {
+@keyframes color2 {
 
     0% {
+        background-color: transparent;
         margin-left: 0px;
+        color: $orange;
     }
 
     100% {
+        background-color: $blue;
         margin-left: 50px;
+        color: $white;
     }
 }
 
-@keyframes slideleft {
+@keyframes color1 {
 
     0% {
+        background-color: $blue;
         margin-left: 50px;
+        color: $white;
     }
 
     100% {
+        background-color: transparent;
         margin-left: 0px;
+        color: $orange;
+    }
+}
+
+@keyframes colors1 {
+
+    0% {
+        color: $blue;
+    }
+
+    100% {
+        color: $orange;
+    }
+}
+
+@keyframes colors2 {
+
+    0% {
+        color: $orange;
+    }
+
+    100% {
+        color: $blue;
     }
 }
 
 .line {
     width: 1240px;
     border: 2px solid $blue;
+    display: block;
 }
 
 .game {
-    border: $blue 2px solid;
+    border:$blue 2px solid;
     height: 500px;
     margin-top: 50px;
+    width: 500px;
 }
 
 @media (min-height: 950px) {
     .box {
         margin-top: 100px;
+    }
+}
+
+@media (min-height: 600px) {
+    .box {
+        height: 650px;
+        margin-top: -10px;
+    }
+
+    .game {
+        margin-top: 25px;
+        margin-left: auto;
+        margin-right: auto;
     }
 }

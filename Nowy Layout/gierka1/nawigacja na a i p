@@ -1,0 +1,119 @@
+<a href="../index.html" class="box__navigation--item"><p class="box__navigation--item--paragraph">ASMIR</p></a>
+          <a href="gierka1.html" class="box__navigation--item"><p class="box__navigation--item--paragraph">Game1</p></a>
+          <a href="../index.html" class="box__navigation--item"><p class="box__navigation--item--paragraph">Game2</p></a>
+          <a href="../index.html" class="box__navigation--item"><p class="box__navigation--item--paragraph">Game3</p></a>
+          <a href="../index.html" class="box__navigation--item"><p class="box__navigation--item--paragraph">Game4</p></a>
+          <a href="../index.html" class="box__navigation--item"><p class="box__navigation--item--paragraph">Game5</p></a>
+
+
+          .box__navigation {
+    width: 1240px;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    margin-top: 30px;
+
+    &--item {
+        width: 206px;
+        text-align: center;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        text-decoration: none;
+
+        &--paragraph {
+            cursor: pointer;
+            font-size: 20px;
+            color: $orange;
+            margin-left: 0px;
+            animation: slideleft .5s both;
+            height: 100%;
+            width: 206px;
+
+            &:nth-child(2) {
+                color: $blue;
+            }
+
+            &:hover {
+                animation: slide.5s both;
+            }
+
+
+        }
+    }
+}
+
+@keyframes slide {
+
+    0% {
+        margin-left: 0px;
+    }
+
+    100% {
+        margin-left: 50px;
+    }
+}
+
+@keyframes slideleft {
+
+    0% {
+        margin-left: 50px;
+    }
+
+    100% {
+        margin-left: 0px;
+    }
+}
+
+.line {
+    width: 1240px;
+    border: 2px solid $blue;
+    display: block;
+}
+
+.game {
+    border:$blue 2px solid;
+    height: 500px;
+    margin-top: 50px;
+    width: 500px;
+}
+
+@media (min-height: 950px) {
+    .box {
+        margin-top: 100px;
+    }
+}
+
+@media (min-height: 600px) {
+    .box {
+        height: 650px;
+        margin-top: -10px;
+    }
+    &__navigation {
+        width: 960px;
+        height: 20px;
+
+        &--item {
+
+            &--paragraph {
+                cursor: pointer;
+                font-size: 20px;
+                color: $orange;
+                margin-left: 0px;
+                animation: slideleft .5s both;
+                height: 100%;
+                width: 160px;
+
+                &:hover {
+                    animation: slide.5s both;
+                }
+            }
+        }
+    }
+
+    .game {
+        margin-top: 25px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+}
