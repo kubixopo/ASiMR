@@ -2,7 +2,7 @@
 function setup(){
   createCanvas(500, 500)
   background('#fed766')
-  slier=createSlider(1, 30, 15, 1)
+  slier=createSlider(1, 30, 25, 1)
   kwadraty=[new kwadrat(250,250)]
 }
 
@@ -19,6 +19,13 @@ function draw(){
     for(let i=0;i<ile;i++){
       stop=false
       kwadraty[i].tworzenie()
+    }
+
+    if((frameCount*slier.value()/10)%200==0){
+      for(i=0;i<kwadraty.length-50;i++){
+        kwadraty.shift()
+      }
+      console.log(kwadraty.length)
     }
   }
 
