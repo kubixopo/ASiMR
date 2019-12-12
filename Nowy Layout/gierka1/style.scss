@@ -52,6 +52,11 @@ body {
             a {
                 text-decoration: none;
                 color: $orange;
+                height: 100%;
+                width: 100%;
+                display: flex;
+                align-items: center;
+                justify-content: center;
             }
 
             &:nth-child(1) {
@@ -61,7 +66,6 @@ body {
             }
 
             &:hover {
-                animation: slide.5s both;
                 animation: color2 .5s both;
             }
 

@@ -74,6 +74,11 @@ a {
   display: flex;
 }
 
+a:hover {
+  background-color: #C0392B;
+  color: #EFEEEE;
+}
+
 .circle {
   width: 65px;
   height: 65px;

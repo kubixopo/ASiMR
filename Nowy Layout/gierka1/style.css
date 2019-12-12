@@ -51,6 +51,11 @@ body {
 .box__navigation--list--item a {
   text-decoration: none;
   color: #F26627;
+  height: 100%;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .box__navigation--list--item:nth-child(1) {
@@ -60,7 +65,6 @@ body {
 }
 
 .box__navigation--list--item:hover {
-  animation: slide 0.5s both;
   animation: color2 .5s both;
 }
 

@@ -77,6 +77,11 @@ a {
     justify-content: center;
     display: flex;
 
+    &:hover {
+        background-color: #C0392B;
+        color: #EFEEEE;
+    }
+
 }
 
 .circle {
