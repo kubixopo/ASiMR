@@ -56,6 +56,11 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
+  animation: colora1 .5s both;
+}
+
+.box__navigation--list--item a:hover {
+  animation: colora2 .5s both;
 }
 
 .box__navigation--list--item:nth-child(1) {
@@ -83,16 +88,32 @@ body {
   animation: colors1 .5s both;
 }
 
+@keyframes colora1 {
+  0% {
+    color: #EFEEEE;
+  }
+  100% {
+    color: #F26627;
+  }
+}
+
+@keyframes colora2 {
+  0% {
+    color: #F26627;
+  }
+  100% {
+    color: #EFEEEE;
+  }
+}
+
 @keyframes color2 {
   0% {
     background-color: transparent;
     margin-left: 0px;
-    color: #F26627;
   }
   100% {
     background-color: #325D79;
     margin-left: 50px;
-    color: #EFEEEE;
   }
 }
 
@@ -100,12 +121,10 @@ body {
   0% {
     background-color: #325D79;
     margin-left: 50px;
-    color: #EFEEEE;
   }
   100% {
     background-color: transparent;
     margin-left: 0px;
-    color: #F26627;
   }
 }
 
